@@ -1,0 +1,97 @@
+---
+// Footer component for Thoughtlyfe website
+---
+
+<footer class="crystal-footer">
+  <div class="crystal-footer-container">
+    <div class="crystal-footer-grid">
+      <div class="crystal-footer-column">
+        <h3 class="crystal-footer-title">Thoughtlyfe</h3>
+        <p class="crystal-footer-description">
+          Discover the sacred geometry within and unlock your path to inner peace and self-mastery through ancient wisdom and modern understanding.
+        </p>
+        <div class="crystal-social-links">
+          <a href="#" aria-label="Facebook">
+            <svg class="crystal-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg class="crystal-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.297-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.807.875 1.297 2.026 1.297 3.323s-.49 2.448-1.297 3.323c-.875.807-2.026 1.297-3.323 1.297zm7.718-1.297c-.875.807-2.026 1.297-3.323 1.297s-2.448-.49-3.323-1.297c-.807-.875-1.297-2.026-1.297-3.323s.49-2.448 1.297-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.807.875 1.297 2.026 1.297 3.323s-.49 2.448-1.297 3.323z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg class="crystal-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="crystal-footer-column">
+        <h4 class="crystal-footer-heading">Quick Links</h4>
+        <ul class="crystal-footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/readings">Sacred Geometry Readings</a></li>
+          <li><a href="/education">Education</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/about">About Darwin</a></li>
+        </ul>
+      </div>
+      
+      <div class="crystal-footer-column">
+        <h4 class="crystal-footer-heading">Products</h4>
+        <ul class="crystal-footer-links">
+          <li><a href="/shop/book">Thoughtlyfe Book</a></li>
+          <li><a href="/shop/courses">Online Courses</a></li>
+          <li><a href="/shop/digital">Digital Downloads</a></li>
+          <li><a href="/shop/merchandise">Merchandise</a></li>
+          <li><a href="/readings">Personal Readings</a></li>
+        </ul>
+      </div>
+      
+      <div class="crystal-footer-column">
+        <h4 class="crystal-footer-heading">Newsletter</h4>
+        <p class="crystal-footer-description">
+          Subscribe to receive updates, exclusive content, and special offers.
+        </p>
+        <form class="crystal-newsletter-form" action="#" method="post">
+          <input 
+            type="email" 
+            class="crystal-newsletter-input" 
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" class="crystal-btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="crystal-footer-bottom">
+      <div class="crystal-copyright">
+        © 2024 Thoughtlyfe. All rights reserved.
+      </div>
+      <div class="crystal-footer-legal">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Newsletter form submission
+  document.querySelector('.crystal-newsletter-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = (e.target as HTMLFormElement).querySelector('input[type="email"]') as HTMLInputElement;
+    if (email?.value) {
+      // Here you would integrate with your newsletter service
+      alert('Thank you for subscribing! We\'ll be in touch soon.');
+      email.value = '';
+    }
+  });
+</script>
+
