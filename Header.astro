@@ -1,0 +1,42 @@
+---
+// Header component for Thoughtlyfe website
+---
+
+<header class="crystal-header">
+  <div class="crystal-header-container">
+    <div class="crystal-logo">
+      <a href="/">Thoughtlyfe</a>
+    </div>
+    <nav class="crystal-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/readings">Aura Sync</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Add scroll effect to header
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.crystal-header');
+    if (window.scrollY > 100) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+</script>
+
+<style>
+  .crystal-header.scrolled {
+    background: rgba(58, 28, 113, 0.95);
+    backdrop-filter: blur(10px);
+  }
+</style>
+

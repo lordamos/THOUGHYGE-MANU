@@ -1,0 +1,927 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Crystal Design Theme - Based on crystals.html and index.html */
+
+/* Base Styles */
+:root {
+  --crystal-primary: #3a1c71;
+  --crystal-primary-light: #4c2583;
+  --crystal-primary-dark: #2e1459;
+  --crystal-secondary: #00c9a7;
+  --crystal-secondary-dark: #00a8c5;
+  --crystal-accent: #ffd700;
+  --crystal-accent-light: #ffe066;
+  --crystal-accent-dark: #ffaa00;
+  --crystal-bg-light: #f5f0ff;
+  --crystal-bg-white: #ffffff;
+  --crystal-text-dark: #333333;
+  --crystal-text-light: #ffffff;
+  --crystal-border-radius: 1rem;
+  --crystal-shadow: 0 4px 20px rgba(58, 28, 113, 0.15);
+  --crystal-transition: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--crystal-text-dark);
+  line-height: 1.6;
+}
+
+.crystal-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.crystal-section {
+  padding: 6rem 0;
+}
+
+.crystal-section:nth-child(even) {
+  background-color: var(--crystal-bg-light);
+}
+
+.crystal-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.crystal-gradient-text {
+  background: linear-gradient(to right, var(--crystal-primary), var(--crystal-primary-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.crystal-gradient-text-light {
+  background: linear-gradient(to right, var(--crystal-accent-light), var(--crystal-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.crystal-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.crystal-center-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Grid System */
+.crystal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.crystal-grid-col {
+  flex: 1;
+  padding: 1rem;
+  min-width: 300px;
+}
+
+.crystal-grid-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Header Styles */
+.crystal-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(58, 28, 113, 0.9), rgba(58, 28, 113, 0));
+  transition: var(--crystal-transition);
+}
+
+.crystal-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.crystal-logo a {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--crystal-text-light);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.crystal-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.crystal-nav li {
+  margin: 0 1rem;
+}
+
+.crystal-nav a {
+  color: var(--crystal-text-light);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--crystal-transition);
+  position: relative;
+}
+
+.crystal-nav a:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--crystal-accent);
+  transition: var(--crystal-transition);
+}
+
+.crystal-nav a:hover:after {
+  width: 100%;
+}
+
+/* Button Styles */
+.crystal-btn-primary {
+  display: inline-block;
+  background: linear-gradient(to right, var(--crystal-accent), var(--crystal-accent-dark));
+  color: var(--crystal-primary);
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--crystal-transition);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.crystal-btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.crystal-btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--crystal-text-light);
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--crystal-transition);
+  border: 2px solid var(--crystal-text-light);
+  cursor: pointer;
+}
+
+.crystal-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.crystal-btn-light {
+  display: inline-block;
+  background: linear-gradient(to right, var(--crystal-accent), var(--crystal-accent-dark));
+  color: var(--crystal-primary);
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--crystal-transition);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.crystal-btn-light:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Video Hero Styles */
+.crystal-video-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.crystal-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.crystal-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(58, 28, 113, 0.6), rgba(76, 37, 131, 0.8));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.crystal-hero-content {
+  max-width: 800px;
+}
+
+.crystal-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: var(--crystal-text-light);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.crystal-hero-subtitle {
+  display: block;
+  background: linear-gradient(to right, var(--crystal-accent-light), var(--crystal-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.crystal-hero-description {
+  font-size: 1.5rem;
+  color: var(--crystal-text-light);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crystal-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.crystal-video-controls {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.crystal-video-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--crystal-text-light);
+  transition: var(--crystal-transition);
+}
+
+.crystal-video-control:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Featured Products Section */
+.crystal-featured-products {
+  background-color: var(--crystal-bg-white);
+}
+
+/* Book Feature Section */
+.crystal-book-feature {
+  background-color: var(--crystal-bg-light);
+}
+
+.crystal-book-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--crystal-border-radius);
+  box-shadow: var(--crystal-shadow);
+  margin: 0 auto;
+  display: block;
+}
+
+.crystal-features {
+  margin: 2rem 0;
+}
+
+.crystal-feature {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.crystal-feature-icon {
+  color: var(--crystal-accent);
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+.crystal-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.crystal-feature-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.crystal-feature-text {
+  color: var(--crystal-text-dark);
+}
+
+/* Author Section */
+.crystal-author {
+  background-color: var(--crystal-bg-white);
+}
+
+.crystal-author-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+  box-shadow: var(--crystal-shadow);
+  margin: 0 auto;
+  display: block;
+}
+
+/* Sacred Geometry Readings Section */
+.crystal-readings {
+  background: linear-gradient(to right, var(--crystal-primary), var(--crystal-primary-light));
+  color: var(--crystal-text-light);
+}
+
+.crystal-light-title {
+  color: var(--crystal-text-light);
+}
+
+/* Testimonials Section */
+.crystal-testimonials {
+  background-color: var(--crystal-bg-white);
+}
+
+/* Education Section */
+.crystal-education {
+  background-color: var(--crystal-bg-light);
+}
+
+/* Newsletter Section */
+.crystal-newsletter {
+  background: linear-gradient(to right, var(--crystal-primary), var(--crystal-primary-light));
+  color: var(--crystal-text-light);
+}
+
+/* Footer Styles */
+.crystal-footer {
+  background-color: var(--crystal-primary-dark);
+  color: var(--crystal-text-light);
+  padding: 4rem 0 2rem;
+}
+
+.crystal-footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.crystal-footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.crystal-footer-column {
+  flex: 1;
+  padding: 1rem;
+  min-width: 250px;
+}
+
+.crystal-footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.crystal-footer-heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.crystal-footer-description {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.crystal-social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.crystal-social-links a {
+  color: var(--crystal-text-light);
+  transition: var(--crystal-transition);
+}
+
+.crystal-social-links a:hover {
+  color: var(--crystal-accent);
+  transform: translateY(-3px);
+}
+
+.crystal-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.crystal-footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.crystal-footer-links a {
+  color: var(--crystal-text-light);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: var(--crystal-transition);
+}
+
+.crystal-footer-links a:hover {
+  opacity: 1;
+  color: var(--crystal-accent);
+}
+
+.crystal-newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.crystal-newsletter-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.8rem 1rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.crystal-footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.crystal-copyright {
+  opacity: 0.7;
+}
+
+.crystal-footer-legal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.crystal-footer-legal a {
+  color: var(--crystal-text-light);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: var(--crystal-transition);
+}
+
+.crystal-footer-legal a:hover {
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .crystal-hero-title {
+    font-size: 3rem;
+  }
+  
+  .crystal-hero-description {
+    font-size: 1.2rem;
+  }
+  
+  .crystal-section {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .crystal-header-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .crystal-logo {
+    margin-bottom: 1rem;
+  }
+  
+  .crystal-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .crystal-nav li {
+    margin: 0.5rem;
+  }
+  
+  .crystal-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .crystal-section-title {
+    font-size: 2rem;
+  }
+  
+  .crystal-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .crystal-hero-title {
+    font-size: 2rem;
+  }
+  
+  .crystal-hero-buttons {
+    flex-direction: column;
+  }
+  
+  .crystal-section {
+    padding: 3rem 0;
+  }
+  
+  .crystal-footer-column {
+    flex: 100%;
+  }
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.crystal-section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.crystal-section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.crystal-section:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.crystal-section:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.crystal-section:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.crystal-section:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.crystal-section:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+
+/* Enhanced Navigation Styles */
+.crystal-header {
+  background: rgba(58, 28, 113, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 20px rgba(58, 28, 113, 0.3);
+}
+
+.crystal-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.crystal-logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--crystal-accent);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.crystal-logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.crystal-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.crystal-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.crystal-nav a:hover {
+  background: rgba(255, 215, 0, 0.15);
+  color: var(--crystal-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.crystal-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--crystal-accent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+.crystal-nav a:hover::after {
+  width: 80%;
+}
+
+/* Enhanced Button Styles */
+.crystal-btn-primary {
+  background: linear-gradient(135deg, var(--crystal-accent), var(--crystal-accent-dark));
+  color: var(--crystal-primary);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--crystal-border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.crystal-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(135deg, var(--crystal-accent-light), var(--crystal-accent));
+}
+
+.crystal-btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.crystal-btn-primary:hover::before {
+  left: 100%;
+}
+
+.crystal-btn-secondary {
+  background: transparent;
+  color: var(--crystal-primary);
+  padding: 1rem 2rem;
+  border: 2px solid var(--crystal-primary);
+  border-radius: var(--crystal-border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.crystal-btn-secondary:hover {
+  background: var(--crystal-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58, 28, 113, 0.3);
+}
+
+.crystal-btn-light {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--crystal-primary);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--crystal-border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.crystal-btn-light:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced Card Styles */
+.crystal-card {
+  background: white;
+  border-radius: var(--crystal-border-radius);
+  box-shadow: var(--crystal-shadow);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.crystal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--crystal-primary), var(--crystal-secondary), var(--crystal-accent));
+}
+
+.crystal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(58, 28, 113, 0.2);
+}
+
+/* Enhanced Grid System */
+.crystal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.crystal-grid-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enhanced Typography */
+.crystal-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--crystal-primary);
+  position: relative;
+}
+
+.crystal-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--crystal-secondary), var(--crystal-accent));
+  border-radius: 2px;
+}
+
+.crystal-gradient-text {
+  background: linear-gradient(135deg, var(--crystal-primary), var(--crystal-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.crystal-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--crystal-text-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced Center Button */
+.crystal-center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+/* Mobile Responsive Improvements */
+@media (max-width: 768px) {
+  .crystal-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(58, 28, 113, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    display: none;
+  }
+  
+  .crystal-nav.active ul {
+    display: flex;
+  }
+  
+  .crystal-section-title {
+    font-size: 2rem;
+  }
+  
+  .crystal-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .crystal-container {
+    padding: 0 1rem;
+  }
+  
+  .crystal-header-content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .crystal-section-title {
+    font-size: 1.75rem;
+  }
+  
+  .crystal-btn-primary,
+  .crystal-btn-secondary,
+  .crystal-btn-light {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+

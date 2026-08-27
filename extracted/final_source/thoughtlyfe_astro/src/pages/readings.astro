@@ -1,0 +1,440 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Aura Sync - Sacred Geometry Readings - Thoughtlyfe">
+  <Header />
+  <main>
+    <!-- AuraSync Hero -->
+    <section class="crystal-hero-section">
+      <div class="crystal-container">
+        <h1 class="crystal-hero-title">Aura Sync</h1>
+        <h2 class="crystal-hero-subtitle">Sacred Geometry Readings</h2>
+        <p class="crystal-hero-description">
+          Discover how sacred geometry patterns can guide your personal journey toward inner peace and self-mastery
+        </p>
+        <div class="crystal-center-button">
+          <a href="#booking" class="crystal-btn-primary">Book Your Reading</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Sacred Geometry Readings -->
+    <section class="crystal-section">
+      <div class="crystal-container">
+        <h2 class="crystal-section-title crystal-gradient-text">About Our Readings</h2>
+        <div class="crystal-grid">
+          <div class="crystal-grid-col">
+            <div class="crystal-card">
+              <p class="crystal-text">
+                Sacred geometry readings provide a unique window into your personal journey through the universal language of geometric patterns. These ancient symbols have been used for thousands of years to understand the fundamental nature of reality and our place within it.
+              </p>
+              <p class="crystal-text">
+                During a reading, our expert guides will help you discover which sacred geometry patterns are most influential in your life right now. By understanding these patterns, you can gain clarity on your path, identify obstacles, and find practical ways to align with your highest potential.
+              </p>
+              <p class="crystal-text">
+                Each reading is completely personalized and includes both theoretical understanding and practical applications you can implement immediately in your daily life.
+              </p>
+            </div>
+          </div>
+          <div class="crystal-grid-col">
+            <div class="crystal-card">
+              <h3 class="crystal-feature-title">What You'll Receive</h3>
+              <ul class="crystal-feature-list">
+                <li>60-minute personal consultation with a sacred geometry expert</li>
+                <li>Identification of your primary and secondary geometric patterns</li>
+                <li>Personalized interpretation of how these patterns influence your life</li>
+                <li>Custom meditation based on your unique geometric blueprint</li>
+                <li>Written report with visual representations of your patterns</li>
+                <li>Practical exercises to integrate these insights into daily life</li>
+                <li>Follow-up resources and recommended practices</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Reading Options -->
+    <section class="crystal-section crystal-pricing">
+      <div class="crystal-container">
+        <h2 class="crystal-section-title crystal-gradient-text">Reading Options</h2>
+        <div class="crystal-pricing-grid">
+          <div class="crystal-pricing-card">
+            <div class="crystal-pricing-header">
+              <h3 class="crystal-pricing-title">Essential Reading</h3>
+              <div class="crystal-pricing-price">$99</div>
+            </div>
+            <div class="crystal-pricing-content">
+              <ul class="crystal-pricing-features">
+                <li>60-minute consultation</li>
+                <li>Pattern identification</li>
+                <li>Basic written report</li>
+              </ul>
+              <a href="#booking" class="crystal-btn-light">Select</a>
+            </div>
+          </div>
+          
+          <div class="crystal-pricing-card crystal-pricing-featured">
+            <div class="crystal-pricing-badge">MOST POPULAR</div>
+            <div class="crystal-pricing-header">
+              <h3 class="crystal-pricing-title">Complete Reading</h3>
+              <div class="crystal-pricing-price">$149</div>
+            </div>
+            <div class="crystal-pricing-content">
+              <ul class="crystal-pricing-features">
+                <li>90-minute consultation</li>
+                <li>Detailed pattern analysis</li>
+                <li>Comprehensive report</li>
+                <li>Custom meditation</li>
+                <li>30-day email support</li>
+              </ul>
+              <a href="#booking" class="crystal-btn-primary">Select</a>
+            </div>
+          </div>
+          
+          <div class="crystal-pricing-card">
+            <div class="crystal-pricing-header">
+              <h3 class="crystal-pricing-title">Premium Reading</h3>
+              <div class="crystal-pricing-price">$249</div>
+            </div>
+            <div class="crystal-pricing-content">
+              <ul class="crystal-pricing-features">
+                <li>2-hour consultation</li>
+                <li>Advanced pattern analysis</li>
+                <li>Premium report package</li>
+                <li>Custom meditation series</li>
+                <li>60-day email support</li>
+                <li>30-min follow-up session</li>
+              </ul>
+              <a href="#booking" class="crystal-btn-light">Select</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Booking Section -->
+    <section id="booking" class="crystal-section crystal-booking">
+      <div class="crystal-container">
+        <h2 class="crystal-section-title crystal-light-title">Book Your Reading</h2>
+        <div class="crystal-booking-form">
+          <form class="crystal-form">
+            <div class="crystal-form-group">
+              <label for="name" class="crystal-form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="crystal-form-input" required>
+            </div>
+            
+            <div class="crystal-form-group">
+              <label for="email" class="crystal-form-label">Email Address</label>
+              <input type="email" id="email" name="email" class="crystal-form-input" required>
+            </div>
+            
+            <div class="crystal-form-group">
+              <label for="phone" class="crystal-form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="crystal-form-input">
+            </div>
+            
+            <div class="crystal-form-group">
+              <label for="reading-type" class="crystal-form-label">Reading Type</label>
+              <select id="reading-type" name="reading-type" class="crystal-form-input" required>
+                <option value="">Select a reading type</option>
+                <option value="essential">Essential Reading - $99</option>
+                <option value="complete">Complete Reading - $149</option>
+                <option value="premium">Premium Reading - $249</option>
+              </select>
+            </div>
+            
+            <div class="crystal-form-group">
+              <label for="preferred-date" class="crystal-form-label">Preferred Date</label>
+              <input type="date" id="preferred-date" name="preferred-date" class="crystal-form-input" required>
+            </div>
+            
+            <div class="crystal-form-group">
+              <label for="preferred-time" class="crystal-form-label">Preferred Time</label>
+              <select id="preferred-time" name="preferred-time" class="crystal-form-input" required>
+                <option value="">Select a time</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+              </select>
+            </div>
+            
+            <div class="crystal-form-group">
+              <label for="message" class="crystal-form-label">Additional Information (Optional)</label>
+              <textarea id="message" name="message" rows="4" class="crystal-form-input" placeholder="Tell us about your goals for this reading or any specific questions you have..."></textarea>
+            </div>
+            
+            <div class="crystal-center-button">
+              <button type="submit" class="crystal-btn-primary">Book Reading</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  // Booking form submission
+  document.querySelector('.crystal-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData);
+    
+    // Here you would integrate with your booking system
+    alert('Thank you for your booking request! We will contact you within 24 hours to confirm your appointment.');
+    (e.target as HTMLFormElement).reset();
+  });
+</script>
+
+<style>
+  .crystal-hero-section {
+    background: linear-gradient(135deg, var(--crystal-primary), var(--crystal-secondary));
+    color: white;
+    padding: 8rem 0 4rem;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .crystal-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .crystal-hero-subtitle {
+    font-size: 1.75rem;
+    color: var(--crystal-accent);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+
+  .crystal-hero-description {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .crystal-pricing {
+    background: var(--crystal-bg-light);
+  }
+
+  .crystal-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .crystal-pricing-card {
+    background: white;
+    border-radius: var(--crystal-border-radius);
+    box-shadow: var(--crystal-shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .crystal-pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(58, 28, 113, 0.2);
+  }
+
+  .crystal-pricing-featured {
+    transform: scale(1.05);
+    border: 3px solid var(--crystal-accent);
+  }
+
+  .crystal-pricing-badge {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--crystal-accent);
+    color: var(--crystal-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 1;
+  }
+
+  .crystal-pricing-header {
+    background: var(--crystal-bg-light);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+  }
+
+  .crystal-pricing-featured .crystal-pricing-header {
+    background: linear-gradient(135deg, var(--crystal-primary), var(--crystal-secondary));
+    color: white;
+  }
+
+  .crystal-pricing-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--crystal-primary);
+  }
+
+  .crystal-pricing-featured .crystal-pricing-title {
+    color: white;
+  }
+
+  .crystal-pricing-price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--crystal-accent);
+  }
+
+  .crystal-pricing-content {
+    padding: 2rem;
+  }
+
+  .crystal-pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  .crystal-pricing-features li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--crystal-bg-light);
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .crystal-pricing-features li:before {
+    content: "✓";
+    color: var(--crystal-secondary);
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .crystal-booking {
+    background: linear-gradient(135deg, var(--crystal-primary), var(--crystal-secondary));
+    color: white;
+  }
+
+  .crystal-booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: var(--crystal-border-radius);
+    box-shadow: var(--crystal-shadow);
+  }
+
+  .crystal-form {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .crystal-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .crystal-form-label {
+    color: var(--crystal-primary);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .crystal-form-input {
+    padding: 1rem;
+    border: 2px solid var(--crystal-bg-light);
+    border-radius: var(--crystal-border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+  }
+
+  .crystal-form-input:focus {
+    outline: none;
+    border-color: var(--crystal-secondary);
+    box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.1);
+  }
+
+  textarea.crystal-form-input {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .crystal-light-title {
+    color: white;
+  }
+
+  .crystal-feature-title {
+    color: var(--crystal-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  .crystal-feature-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .crystal-feature-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--crystal-bg-light);
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .crystal-feature-list li:before {
+    content: "✦";
+    color: var(--crystal-accent);
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .crystal-hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .crystal-hero-subtitle {
+      font-size: 1.5rem;
+    }
+    
+    .crystal-hero-description {
+      font-size: 1.1rem;
+    }
+    
+    .crystal-pricing-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .crystal-pricing-featured {
+      transform: none;
+    }
+    
+    .crystal-booking-form {
+      margin: 0 1rem;
+      padding: 2rem;
+    }
+  }
+</style>
+
