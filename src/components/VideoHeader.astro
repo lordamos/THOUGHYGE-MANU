@@ -1,0 +1,136 @@
+---
+// VideoHeader component for Astro
+---
+
+<div class="video-header">
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    class="video-background"
+  >
+    <source src="/videos/header-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-fallback" style="background-image: url('/videos/header-fallback.jpg');"></div>
+  
+  <div class="video-overlay">
+    <div class="video-content">
+      <h1 class="video-title">Thoughtlyfe</h1>
+      <p class="video-subtitle">Sacred Geometry Within</p>
+      <p class="video-description">A Guide to Inner Peace & Self-mastery</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .video-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
+  }
+
+  .video-fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.3) 0%,
+      rgba(59, 130, 246, 0.3) 50%,
+      rgba(16, 185, 129, 0.3) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .video-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  .video-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+      to right,
+      #f472b6,
+      #a855f7,
+      #3b82f6
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .video-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .video-description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    .video-title {
+      font-size: 2.5rem;
+    }
+    
+    .video-subtitle {
+      font-size: 1.5rem;
+    }
+    
+    .video-description {
+      font-size: 1rem;
+    }
+    
+    .video-content {
+      padding: 1rem;
+    }
+  }
+</style>

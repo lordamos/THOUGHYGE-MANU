@@ -1,0 +1,286 @@
+---
+import Navigation from "../components/Navigation.jsx";
+import VideoHeader from "../components/VideoHeader.astro";
+
+export interface Props {
+	title: string;
+	showVideoHeader?: boolean;
+}
+
+const { title, showVideoHeader = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Thoughtlyfe - Sacred Geometry Within. A spiritual guide to inner peace and self-mastery by Darwin Nicholas Hayle." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Navigation client:load currentPath={Astro.url.pathname} />
+		{showVideoHeader && <VideoHeader />}
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		/* Light theme colors */
+		--color-primary: hsl(270, 91%, 65%); /* Deep purple */
+		--color-secondary: hsl(174, 72%, 56%); /* Teal */
+		--color-accent: hsl(306, 84%, 85%); /* Light purple */
+		--color-light-bg: hsl(210, 20%, 98%); /* Light background */
+		--color-text: hsl(210, 22%, 22%); /* Dark text */
+		--color-text-light: hsl(210, 14%, 53%); /* Light text */
+		--color-white: hsl(0, 0%, 100%);
+		--color-border: hsl(210, 20%, 90%); /* Border color */
+	}
+
+	.dark {
+		/* Dark theme colors with high contrast */
+		--color-primary: hsl(270, 91%, 75%); /* Lighter purple for dark mode */
+		--color-secondary: hsl(174, 72%, 66%); /* Lighter teal for dark mode */
+		--color-accent: hsl(306, 84%, 75%); /* Adjusted light purple */
+		--color-light-bg: hsl(220, 13%, 18%); /* Dark background */
+		--color-text: hsl(210, 20%, 98%); /* Very light text for dark mode */
+		--color-text-light: hsl(210, 14%, 83%); /* Light text for dark mode */
+		--color-white: hsl(220, 13%, 9%); /* Very dark for cards */
+		--color-border: hsl(220, 13%, 30%); /* Dark border color */
+	}
+
+	body {
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+		line-height: 1.6;
+		font-weight: 400;
+		transition: background-color 0.3s ease, color 0.3s ease;
+		background-color: var(--color-white);
+		color: var(--color-text);
+	}
+
+	/* Typography */
+	.heading-1 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		line-height: 1.2;
+		background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+	.heading-2 {
+		font-size: 2rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		line-height: 1.3;
+		background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+	.heading-3 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		color: var(--color-primary);
+	}
+
+	.text-body {
+		font-size: 1rem;
+		line-height: 1.6;
+		margin-bottom: 1rem;
+		color: var(--color-text-light);
+	}
+
+	.text-primary {
+		color: var(--color-primary);
+	}
+
+	.text-secondary {
+		color: var(--color-secondary);
+	}
+
+	.text-muted {
+		color: var(--color-text-light);
+	}
+
+	/* Button Components */
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.75rem 1.5rem;
+		border-radius: 0.5rem;
+		font-weight: 600;
+		font-size: 1rem;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		border: none;
+		text-decoration: none;
+		min-width: 120px;
+		white-space: nowrap;
+		background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+		color: white;
+	}
+
+	.btn:hover {
+		opacity: 0.9;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	.btn-primary {
+		background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+		color: white;
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: var(--color-primary);
+		border: 2px solid var(--color-primary);
+	}
+
+	.btn-secondary:hover {
+		background: var(--color-primary);
+		color: white;
+	}
+
+	.btn-group {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* Card Components */
+	.card {
+		border-radius: 0.75rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		border: 1px solid var(--color-border);
+		transition: all 0.3s ease;
+		background-color: var(--color-white);
+	}
+
+	.card:hover {
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+		transform: translateY(-4px);
+	}
+
+	/* Layout */
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.section {
+		padding: 5rem 2rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 2rem;
+		background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+
+	.section-description {
+		font-size: 1.125rem;
+		text-align: center;
+		margin-bottom: 2rem;
+		max-width: 48rem;
+		margin-left: auto;
+		margin-right: auto;
+		color: var(--color-text-light);
+	}
+
+	/* Background utilities */
+	.bg-card {
+		background-color: var(--color-white);
+	}
+
+	.bg-light {
+		background-color: var(--color-light-bg);
+	}
+
+	/* Form Components */
+	.form-group {
+		display: flex;
+		gap: 1rem;
+		align-items: stretch;
+	}
+
+	.form-input {
+		flex: 1;
+		padding: 0.75rem 1rem;
+		border: 2px solid var(--color-border);
+		border-radius: 0.5rem;
+		font-size: 1rem;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		background-color: var(--color-white);
+		color: var(--color-text);
+	}
+
+	.form-input:focus {
+		outline: none;
+		border-color: var(--color-primary);
+		box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.container {
+			padding: 0 1rem;
+		}
+		
+		.section {
+			padding: 3rem 1rem;
+		}
+		
+		.btn-group {
+			flex-direction: column;
+			align-items: stretch;
+		}
+		
+		.btn {
+			width: 100%;
+			max-width: 24rem;
+			margin: 0 auto;
+		}
+		
+		.form-group {
+			flex-direction: column;
+			gap: 1rem;
+		}
+		
+		.form-input,
+		.form-group .btn {
+			width: 100%;
+		}
+		
+		.heading-1 {
+			font-size: 2rem;
+		}
+		
+		.heading-2 {
+			font-size: 1.75rem;
+		}
+		
+		.section-title {
+			font-size: 2rem;
+		}
+	}
+</style>
+

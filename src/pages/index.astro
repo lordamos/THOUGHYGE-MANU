@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NewsletterForm from "../components/NewsletterForm.jsx";
+---
+
+<Layout title="Thoughtlyfe - Spiritual Guidance">
+  <main>
+    <section class="section bg-card">
+      <div class="container mx-auto text-center">
+        <h1 class="heading-1 mb-6">Welcome to Thoughtlyfe</h1>
+        <p class="text-body text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+          Discover your inner wisdom and unlock your highest potential with personalized spiritual guidance from Darwin Nicholas Hayle.
+        </p>
+        <div class="btn-group">
+          <a href="/readings" class="btn btn-primary">Book a Reading</a>
+          <a href="/courses" class="btn btn-outline">Explore Courses</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container mx-auto">
+        <h2 class="section-title">Our Core Offerings</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card p-6 text-center">
+            <div class="text-4xl mb-4">🔮</div>
+            <h3 class="heading-3 text-xl mb-3">Intuitive Readings</h3>
+            <p class="text-body text-sm mb-4">
+              Gain clarity and guidance on your life path, relationships, and soul purpose through personalized intuitive readings.
+            </p>
+            <a href="/readings" class="text-primary hover:text-secondary text-sm font-semibold transition-colors">
+              Learn More →
+            </a>
+          </div>
+
+          <div class="card p-6 text-center">
+            <div class="text-4xl mb-4">📚</div>
+            <h3 class="heading-3 text-xl mb-3">Spiritual Courses</h3>
+            <p class="text-body text-sm mb-4">
+              Deepen your spiritual understanding and develop your intuitive abilities with our transformative online courses.
+            </p>
+            <a href="/courses" class="text-primary hover:text-secondary text-sm font-semibold transition-colors">
+              Explore Courses →
+            </a>
+          </div>
+
+          <div class="card p-6 text-center">
+            <div class="text-4xl mb-4">💎</div>
+            <h3 class="heading-3 text-xl mb-3">Crystal Healing</h3>
+            <p class="text-body text-sm mb-4">
+              Harness the power of crystals for energy balancing, emotional healing, and spiritual alignment.
+            </p>
+            <a href="/crystals" class="text-primary hover:text-secondary text-sm font-semibold transition-colors">
+              Discover Crystals →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-card">
+      <div class="container mx-auto text-center">
+        <h2 class="section-title">About Darwin Nicholas Hayle</h2>
+        <div class="max-w-4xl mx-auto">
+          <img
+            src="/images/author/darwin-hayle.jpg"
+            alt="Darwin Nicholas Hayle"
+            class="w-48 h-48 rounded-full mx-auto mb-8 object-cover shadow-lg"
+          />
+          <p class="text-body text-lg mb-8 leading-relaxed">
+            Darwin is a spiritual guide, intuitive reader, and consciousness coach dedicated to helping individuals unlock their highest potential. With over two decades of experience in metaphysical studies, energy healing, and ancient wisdom traditions, Darwin offers profound insights and practical tools for personal transformation.
+          </p>
+          <a href="/about-darwin" class="btn btn-primary">Learn More About Darwin</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container mx-auto text-center">
+        <h2 class="section-title">Stay Connected</h2>
+        <p class="text-body text-lg mb-8 max-w-2xl mx-auto">
+          Subscribe to receive new spiritual insights, exclusive content, and updates on courses and readings directly in your inbox.
+        </p>
+        <NewsletterForm client:load />
+      </div>
+    </section>
+
+    <section class="section text-center text-white bg-gradient-to-r from-primary to-secondary">
+      <div class="container mx-auto">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold mb-4 text-white">Ready to Begin Your Journey?</h2>
+          <p class="text-xl mb-8 max-w-2xl mx-auto opacity-95">
+            Take the first step towards a more enlightened and fulfilling life. Your spiritual awakening awaits.
+          </p>
+          <div class="btn-group">
+            <a href="/readings" class="btn bg-white text-black hover:bg-gray-100">Book a Reading</a>
+            <a href="/contact" class="btn border-white text-white hover:bg-white hover:text-black">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
